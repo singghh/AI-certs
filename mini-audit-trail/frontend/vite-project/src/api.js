@@ -1,4 +1,4 @@
-export const API_URL = "http://localhost:5000";
+export const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5173"; 
 
 export async function saveVersion(text) {
   const res = await fetch(`${API_URL}/save-version`, {
